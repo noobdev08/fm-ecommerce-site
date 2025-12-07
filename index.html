@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <style>
+    .attribution { font-size: 15px; text-align: center; margin-bottom: 1rem;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <nav>
+    <section class="nav-left">
+      <img src="./images/icon-menu.svg" alt="hamburger" class="hamburger">
+      <img src="./images/logo.svg" alt="logo">
+      <ul>
+        <img src="./images/icon-close.svg" alt="icon-close" class="close-hamburger">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </section>
+      
+    <section class="nav-right">
+        <img src="./images/icon-cart.svg" alt="icon-cart">
+        <img src="./images/image-avatar.png" alt="icon-avatar">
+    </section>
+  </nav>
+
+  <main class="container">
+    <section class="main">
+      <article class="images-section">
+        <img src="./images/image-product-1.jpg" alt="image-product-1" class="main-img">
+        <div class="arrows">
+          <img src="./images/icon-previous.svg" alt="image-previous">
+          <img src="./images/icon-next.svg" alt="image-previous">
+        </div>
+        <div class="img-section-2">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail">
+        </div>
+      </article>
+
+      <article class="text-section">
+        <p class="first-text">SNEAKER COMPANY</p>
+        <h1 class="main-text">Fall Limited Edition Sneakers</h1>
+        <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        
+        <div class="price">
+          <h2>$125.00</h2>
+          <span>50%</span>
+          <del>$250.00</del>
+        </div>
+
+        <div class="cart-section">
+          <div class="counter">
+            <img src="./images/icon-minus.svg" alt="icon-minus">
+            <p>0</p>
+            <img src="./images/icon-plus.svg" alt="icon-plus">
+          </div>
+          <button><img src="./images/icon-cart.svg" alt="icon-cart"> Add to cart</button>
+        </div>
+      </article>
+    </section>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/noobdev08" target="_blank">noobdev08</a>.
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-left ul').classList.add('active');
+    document.querySelector('.overlay').classList.add('active');
+  });
+
+  document.querySelector('.close-hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-left ul').classList.remove('active');
+    document.querySelector('.overlay').classList.remove('active');
+  });
+</script>
+</body>
+<div class="overlay"></div>
+</html>
