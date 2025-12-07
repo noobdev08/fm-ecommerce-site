@@ -241,10 +241,14 @@ nav {
 
 /*===== MOBILE STYLES =====*/
 @media (max-width: 768px) {
+    body {
+        gap: 0rem;
+    }
+    
     .container {
         width: 100%;
         padding: 0;
-        gap: 0rem;
+        gap: 1rem;
     }
 
     nav {
@@ -399,5 +403,4 @@ nav {
         opacity: 1;
         visibility: visible;
     }
-
 }
