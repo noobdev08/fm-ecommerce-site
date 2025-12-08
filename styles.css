@@ -51,6 +51,7 @@ nav {
     border-bottom: 1px solid var(--clr-neutral-light-grayish-blue);
     padding: 1rem 1rem 1.5rem 1rem;
     margin: 0 auto;
+    position: relative;
 }
 
 /*===== NAV STYLES LEFT =====*/
@@ -111,6 +112,7 @@ nav {
     width: 25rem;
     height: 25rem;
     border-radius: 1rem;
+    object-fit: contain;
 }
 
 .img-section-2 {
@@ -180,7 +182,7 @@ nav {
 /*===== CART BUTTONS STYLES =====*/
 .cart-section {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 0.5rem;
 }
 
@@ -193,6 +195,7 @@ nav {
     border-radius: 0.5rem;
     gap: 2.5rem;
     font-weight: 700;
+    width: 9rem;
 }
 
 .counter img {
@@ -222,11 +225,6 @@ nav {
 }
 
 /*===== SELECTED IMAGE STATIC STYLES =====*/
-.img-section-2 img:nth-of-type(1) {
-    border: 3px solid var(--clr-primary-orange);
-    opacity: 0.7;
-}
-
 .hamburger {
     display: none;
 }
@@ -237,6 +235,28 @@ nav {
 
 .close-hamburger {
     display: none;
+}
+
+.thumbnail:hover {
+    cursor: pointer;
+}
+
+.thumbnail.active {
+    border: 3px solid var(--clr-primary-orange);
+    opacity: 0.7;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 1rem;
+  right: 5.3rem;
+  background: var(--clr-primary-orange);
+  color: white;
+  font-size: 0.5rem;
+  font-weight: 700;
+  padding: 0.1rem 0.3rem;
+  border-radius: 50%;
+  display: none;
 }
 
 /*===== MOBILE STYLES =====*/
@@ -253,12 +273,11 @@ nav {
 
     nav {
         padding: 1.5rem 0;
-        position: relative;
         width: 100%;
     }
 
     .nav-left {
-        gap: 0.5rem;
+        gap: 1rem;
         padding-left: 1rem;
     }
 
@@ -330,6 +349,10 @@ nav {
         padding: 1.1rem;
     }
 
+    .counter {
+        width: 100%;
+    }
+
     .price span {
         bottom: 3px;
     }
@@ -353,6 +376,22 @@ nav {
         border-radius: 50%;
         padding: 1rem;
         opacity: 0.8;
+    }
+
+    .cart-badge {
+        top: 1.5rem;
+        right: 3.8rem;
+        background: var(--clr-primary-orange);
+        color: white;
+        font-size: 0.6rem;
+        font-weight: 700;
+        padding: 0.1rem 0.3rem;
+        border-radius: 50%;
+        display: none;
+    }
+
+    .cart{
+        width: 1.3rem;
     }
 
     /*AI Code down below, rewrite tommorow*/
